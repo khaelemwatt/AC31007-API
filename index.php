@@ -14,7 +14,7 @@ $rules = array(
 
     //Admin Pages
     //
-    'login' => "/login",
+    'login' => "/login/(?'username'[\w\-]+)(?'password'[\w\-]+)",
     'create_article' => "/createarticle",
     'logout' => "/logout",
     //
