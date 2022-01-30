@@ -11,9 +11,9 @@ $password = $_POST['password'];
 $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
 $sql = sprintf("%s `username`='%s';", $sql, $username);
 
-$test = $db->query("SELECT * FROM `user` WHERE `username`='admin';");
-$testrow = $test->fetch_array();
-echo json_encode($testrow);
+// $test = $db->query("SELECT * FROM `user` WHERE `username`='admin';");
+// $testrow = $test->fetch_array();
+// echo json_encode($testrow);
 //
 //NEED TO COVER CASE WHERE USERNAME TYPED IS NOT IN THE DATABASE
 //
