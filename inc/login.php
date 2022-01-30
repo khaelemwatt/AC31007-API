@@ -18,12 +18,12 @@ echo json_encode($testrow);
 //
 
 // //Send the database our query and store the result
-$result = $db->query($sql);
-$row = $result->fetch_array();
+// $result = $db->query($sql);
+// $row = $result->fetch_array();
 
-//Debug statements
-console($sql);
-console("Expected Password hash: ".$row['password']);
+// //Debug statements
+// console($sql);
+// console("Expected Password hash: ".$row['password']);
 
 
 // $userPassword = hash('sha256', $password);
