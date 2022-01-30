@@ -2,9 +2,12 @@
 //Include databse connection
 include("dbconnect.php");
 
+if($isset($_POST['username']) && !empty($_POST['username'])){
+  console($_POST['username']);
+}
 
-$data = trim(file_get_contents('php://input'));
-console($data);
+// $data = trim(file_get_contents('php://input'));
+// console($data);
 
 //Form the sql query for selecting the password for the username provided
 $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
