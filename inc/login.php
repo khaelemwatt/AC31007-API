@@ -6,6 +6,8 @@ include("dbconnect.php");
 //Store the values
 $username = $_POST['username'];
 $password = $_POST['password'];
+console($username);
+console($password);
 
 //Form the sql query for selecting the password for the username provided
 $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
