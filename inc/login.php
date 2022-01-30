@@ -3,9 +3,8 @@
 include("dbconnect.php");
 
 
-if($isset($_POST['username']) && !empty($_POST['username'])){
-  echo json_encode($_POST['username']);
-}
+$username = $params['username'];
+echo json_encode($username);
 
 // $data = trim(file_get_contents('php://input'));
 // console($data);
