@@ -35,7 +35,7 @@ console("Password entered hash: ".$userPassword);
 if($userPassword == $row['password']){
     //If it matches we will send true result with user data
 
-    $response = array("success" => "true", "username" => $row['username'], "level" => $row['level'];
+    $response = array("success" => "true", "username" => $row['username'], "level" => $row['level']);
     echo json_encode($response);  
 
 
