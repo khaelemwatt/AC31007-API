@@ -1,6 +1,8 @@
 <?php
 
 define('INCLUDE_DIR', dirname(__FILE__) . '/inc/');
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
 
 $rules = array(
     //
