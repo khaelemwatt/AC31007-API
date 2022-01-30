@@ -36,13 +36,13 @@ if($userPassword == $row['password']){
     //If it matches we will send true result with user data
 
     $response = array("success" => "true", "username" => $row['username'], "level" => $row['level'];
-    echo json_encode($response);
-    
+    echo json_encode($response);  
 
 
 }else{
     //If password doesnt match, reject this login attempt
     console("Rejected");
-    echo '<script>reject();</script>';
+    $response = array("success" => "false");
+    echo json_encode($response);
 }            
 ?>
