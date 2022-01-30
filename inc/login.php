@@ -3,8 +3,8 @@
 include("dbconnect.php");
 
 
-$username = $params['username'];
-echo json_encode($username);
+$post = json_decode(file_get_contents("php://", TRUE));
+echo json_encode($post);
 
 // $data = trim(file_get_contents('php://input'));
 // console($data);
@@ -22,9 +22,9 @@ $sql = sprintf("%s `username`='%s';", $sql, $username);
 // //
 
 // //Send the database our query and store the result
-$result = $db->query($sql);
-$row = $result->fetch_array();
-echo json_encode($row);
+// $result = $db->query($sql);
+// $row = $result->fetch_array();
+// echo json_encode($row);
 
 // //Debug statements
 // // console($sql);
