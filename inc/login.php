@@ -2,9 +2,9 @@
 //Include databse connection
 include("dbconnect.php");
 
-if($isset($_POST['username']) && !empty($_POST['username'])){
-  console($_POST['username']);
-}
+// if($isset($_POST['username']) && !empty($_POST['username'])){
+//   console($_POST['username']);
+// }
 
 // $data = trim(file_get_contents('php://input'));
 // console($data);
