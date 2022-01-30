@@ -1,12 +1,6 @@
 //Include databse connection
 include("dbconnect.php");
 
-<!-- //Checks if the post values are set (i.e. have been posted) and arent empty
-$usernameSet = isset($_POST['username']) && !empty($_POST['username']);
-$passwordSet = isset($_POST['password']) && !empty($_POST['password']); -->
-
-<!-- //if both username and password are set and not empty we know the form has been submitted
-if($usernameSet && $passwordSet){ -->
 
 //Store the values
 $username = $_POST['username'];
@@ -15,6 +9,7 @@ $password = $_POST['password'];
 //Form the sql query for selecting the password for the username provided
 $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
 $sql = sprintf("%s `username`='%s';", $sql, $username);
+
 
 //
 //NEED TO COVER CASE WHERE USERNAME TYPED IS NOT IN THE DATABASE
@@ -38,21 +33,12 @@ if($userPassword == $row['password']){
     //If it matches we will send true result with user data
 
     $response = array("success" => "true", "username" => $row['username'], "level" => $row['level'];
-    $json = json_encode($response);
-    echo $json
-<!--     if($row['level'] == 0){
-        //If user has level 0 they are super admin and can create other admins
-        //Redirect this user to the page to create admins
-        echo '<script> window.location.href = "/createAdmin" </script>';
-    }else{
-        //If user has anything else (level 1) they are normal admin who can
-        //add/edit/remove events. Redirect them to some page
-        echo '<script> window.location.href = "/api/allEvents" </script>';
-    } -->
+    echo json_encode($response);
+    
+
 
 }else{
     //If password doesnt match, reject this login attempt
     console("Rejected");
     echo '<script>reject();</script>';
 }            
-<!-- }         -->
