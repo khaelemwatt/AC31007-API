@@ -4,9 +4,9 @@ include("dbconnect.php");
 
 console("test");
 
-if($isset($_POST['username']) && !empty($_POST['username'])){
-  echo json_encode($_POST['username']);
-}
+// if($isset($_POST['username']) && !empty($_POST['username'])){
+//   echo json_encode($_POST['username']);
+// }
 
 // $data = trim(file_get_contents('php://input'));
 // console($data);
