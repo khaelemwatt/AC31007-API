@@ -1,3 +1,4 @@
+<?php
 //Include databse connection
 include("dbconnect.php");
 
@@ -44,3 +45,4 @@ if($userPassword == $row['password']){
     console("Rejected");
     echo '<script>reject();</script>';
 }            
+?>
