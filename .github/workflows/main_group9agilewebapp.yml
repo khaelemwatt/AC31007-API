@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'Group9AgileWebApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6E8BEEBEC0894B02B095CF09721DBDEA }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_61F36BBDB389464C87C0796FF22B46A4 }}
           package: .
