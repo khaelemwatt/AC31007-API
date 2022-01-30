@@ -10,8 +10,8 @@ echo json_encode($username);
 // console($data);
 
 // //Form the sql query for selecting the password for the username provided
-// $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
-// $sql = sprintf("%s `username`='%s';", $sql, $username);
+$sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
+$sql = sprintf("%s `username`='%s';", $sql, $username);
 
 // // $test = $db->query("SELECT * FROM `user` WHERE `username`='admin';");
 // // $testrow = $test->fetch_array();
@@ -22,8 +22,9 @@ echo json_encode($username);
 // //
 
 // //Send the database our query and store the result
-// $result = $db->query($sql);
-// $row = $result->fetch_array();
+$result = $db->query($sql);
+$row = $result->fetch_array();
+echo json_encode($row);
 
 // //Debug statements
 // // console($sql);
