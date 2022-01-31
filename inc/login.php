@@ -2,7 +2,8 @@
 //Include databse connection
 include("dbconnect.php");
 
-$post = json_decode(file_get_contents("php://", TRUE));
+$post = file_get_contents("php://", TRUE));
+echo json_encode($post);
 
 // $data = json_decode(file_get_contents('php://input')));
 console($post);
