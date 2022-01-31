@@ -9,7 +9,7 @@ $rules = array(
     //API Routes
     'apiShowEvents' => "/api/allEvents",
     'apiShowSingleDogs' => "/api/singleDog/(?'dogID'[\w\-]+)",
-
+    'apiEditEvent' => "/api/editEvent",
 
 
     //Admin Pages
