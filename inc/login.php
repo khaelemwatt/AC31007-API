@@ -8,14 +8,12 @@ $sql = sprintf("%s%s';", $sql, $postData['username']);
 
 $rows = array();
 $result = $db->query($sql);
-while ($row = $result->fetch_array()) {
-    $rows[] = $row;
-}
+$row = $result->fetch_array()
 
 $password = $postData['password'];
 $password = hash("sha256", $password);
-print_r(json_encode($rows));
-print_r($rows['password']);
+print_r($row);
+print_r($row['password']);
 
 if($password == $rows['password']){
     header("Access-Control-Allow-Origin: *");
