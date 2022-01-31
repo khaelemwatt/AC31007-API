@@ -11,10 +11,15 @@ $result = $db->query($sql);
 while ($row = $result->fetch_array()) {
     $rows[] = $row;
 }
-header("Access-Control-Allow-Origin: *");
-header('Content-type: application/json');
-//print_r($rows);
-echo json_encode($rows);
 
+$password = $postData['password'];
+$password = hash("sha256", $password);
+
+if($password == $rows['password']){
+    header("Access-Control-Allow-Origin: *");
+    header('Content-type: application/json');
+    //print_r($rows);
+    echo json_encode($rows);
+}
 
 php?>
