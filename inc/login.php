@@ -3,7 +3,10 @@
 include("dbconnect.php");
 
 $post = (array) json_decode(file_get_contents("php://", TRUE));
-echo json_encode($post);
+
+$test = "SELECT * FROM `user` where `username` = 'admin'";
+$testResult = $db->query($test);
+echo json_encode($row);
 
 // //Form the sql query for selecting the password for the username provided
 $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
