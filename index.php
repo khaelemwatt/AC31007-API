@@ -8,7 +8,6 @@ $rules = array(
     //
     //API Routes
     'apiShowEvents' => "/api/allEvents",
-    'apiShowSingleDogs' => "/api/singleDog/(?'dogID'[\w\-]+)",
     'apiEditEvent' => "/api/editEvent",
 
 
@@ -16,6 +15,7 @@ $rules = array(
     //
     'login' => "/login",
     'createEvent' => "/createEvent",
+    'createAdmin' => "/createAdmin",
     'logout' => "/logout",
     'createTour' => "/createTour",
     //
