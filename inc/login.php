@@ -19,7 +19,7 @@ if($password == $rows['password']){
     header("Access-Control-Allow-Origin: *");
     header('Content-type: application/json');
     //print_r($rows);
-    echo json_encode($rows);
+    echo json_encode($row);
 }
 
 php?>
