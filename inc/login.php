@@ -4,7 +4,7 @@ include("dbconnect.php");
 $postData = (array) json_decode(file_get_contents("php://input", TRUE));
 
 $sql = "SELECT * FROM user WHERE username = '";
-$sql = sprintf("%s%s', $sql, $postData['username']);
+$sql = sprintf("%s%s';", $sql, $postData['username']);
 
 $rows = array();
 $result = $db->query($sql);
