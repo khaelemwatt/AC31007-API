@@ -6,7 +6,8 @@ $post = (array) json_decode(file_get_contents("php://", TRUE));
 
 $test = "SELECT * FROM `user` where `username` = 'admin'";
 $testResult = $db->query($test);
-echo json_encode($row);
+$testRow = $testResult->fetch_array();
+echo json_encode($testRow);
 
 // //Form the sql query for selecting the password for the username provided
 $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
