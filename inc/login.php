@@ -17,16 +17,16 @@ echo json_encode($testrow);
 // //NEED TO COVER CASE WHERE USERNAME TYPED IS NOT IN THE DATABASE
 // //
 
-//Send the database our query and store the result
-$result = $db->query($sql);
-$row = $result->fetch_array();
+// //Send the database our query and store the result
+// $result = $db->query($sql);
+// $row = $result->fetch_array();
 
 
-$userPassword = hash('sha256', $password);
+// $userPassword = hash('sha256', $password);
 
-//Check if the password provided matches the one in the database
-if($userPassword == $row['password']){
-    //If it matches we will send true result with user data
+// //Check if the password provided matches the one in the database
+// if($userPassword == $row['password']){
+//     //If it matches we will send true result with user data
 
     $response = array("success" => "true", "username" => $row['username'], "level" => $row['level']);
     echo json_encode($response);  
