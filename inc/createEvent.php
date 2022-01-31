@@ -10,14 +10,14 @@
          $result = $db->query($sql);
          $row = $result->fetch_array();
          
-         $password = $postData['password'];
-         $password = hash("sha256", $password);
+        //  $password = $postData['password'];
+        //  $password = hash("sha256", $password);
          
-         if($password == $row['password']){
-             header("Access-Control-Allow-Origin: *");
-             header('Content-type: application/json');
-             echo json_encode($row);
-         }
+        //  if($password == $row['password']){
+        //      header("Access-Control-Allow-Origin: *");
+        //      header('Content-type: application/json');
+        //      echo json_encode($row);
+        //  }
             
         
 ?>
