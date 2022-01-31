@@ -8,7 +8,7 @@
          
          $rows = array();
          $result = $db->query($sql);
-         $row = $result->fetch_array();
+        //  $row = $result->fetch_array();
          
         //  $password = $postData['password'];
         //  $password = hash("sha256", $password);
