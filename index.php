@@ -17,6 +17,7 @@ $rules = array(
     'login' => "/login",
     'createEvent' => "/createEvent",
     'logout' => "/logout",
+    'createTour' => "/createTour",
     //
     // Home Page
     //
