@@ -5,8 +5,11 @@ include("dbconnect.php");
 // $post = (array) json_decode(file_get_contents("php://input", TRUE));
 
 $test = $db->query("SELECT * FROM `user` WHERE `username`='admin';");
+print_r($test);
 $testrow = $test->fetch_array();
+print_r($testrow);
 echo json_encode($testrow);
+
 // var_dump($post);
 // echo json_encode($post);
 
