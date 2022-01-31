@@ -1,11 +1,11 @@
 <?php
 //Include databse connection
 include("dbconnect.php");
-
+console("Test");
 
 $post = json_decode(file_get_contents("php://", TRUE));
 
-// $data = trim(file_get_contents('php://input'));
+// $data = json_decode(file_get_contents('php://input')));
 console($post);
 
 // //Form the sql query for selecting the password for the username provided
