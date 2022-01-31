@@ -6,7 +6,7 @@ include("dbconnect.php");
 $post = json_decode(file_get_contents("php://", TRUE));
 
 // $data = trim(file_get_contents('php://input'));
-// console($data);
+console($post);
 
 // //Form the sql query for selecting the password for the username provided
 $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
