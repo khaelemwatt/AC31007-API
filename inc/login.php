@@ -2,11 +2,8 @@
 //Include databse connection
 include("dbconnect.php");
 
-$post = file_get_contents("php://", TRUE);
+$post = (array) json_decode(file_get_contents("php://", TRUE));
 echo json_encode($post);
-
-// $data = json_decode(file_get_contents('php://input')));
-console($post);
 
 // //Form the sql query for selecting the password for the username provided
 $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
