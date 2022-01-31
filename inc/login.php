@@ -12,13 +12,10 @@ $row = $result->fetch_array();
 
 $password = $postData['password'];
 $password = hash("sha256", $password);
-print_r($row);
-print_r($row['password']);
 
-if($password == $rows['password']){
+if($password == $row['password']){
     header("Access-Control-Allow-Origin: *");
     header('Content-type: application/json');
-    //print_r($rows);
     echo json_encode($row);
 }
 
