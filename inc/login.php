@@ -1,7 +1,6 @@
 <?php
 //Include databse connection
 include("dbconnect.php");
-console("Test");
 
 $post = json_decode(file_get_contents("php://", TRUE));
 
@@ -12,15 +11,12 @@ console($post);
 $sql = "SELECT `username`, `password`, `level` FROM `user` WHERE";
 $sql = sprintf("%s `username`='%s';", $sql, $post['username']);
 
-// // $test = $db->query("SELECT * FROM `user` WHERE `username`='admin';");
-// // $testrow = $test->fetch_array();
-// // echo json_encode($testrow);
 
 // //
 // //NEED TO COVER CASE WHERE USERNAME TYPED IS NOT IN THE DATABASE
 // //
 
-// //Send the database our query and store the result
+//Send the database our query and store the result
 $result = $db->query($sql);
 $row = $result->fetch_array();
 
@@ -37,7 +33,6 @@ if($userPassword == $row['password']){
 
 }else{
     //If password doesnt match, reject this login attempt
-    //console("Rejected");
     $response = array("success" => "false");
     echo json_encode($response);
 }            
