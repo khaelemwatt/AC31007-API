@@ -14,7 +14,7 @@ while ($row = $result->fetch_array()) {
 
 $password = $postData['password'];
 $password = hash("sha256", $password);
-//print_r($rows);
+print_r(json_encode($rows));
 print_r($rows['password']);
 
 if($password == $rows['password']){
