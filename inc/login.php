@@ -13,10 +13,8 @@ while ($row = $result->fetch_array()) {
 }
 
 $password = $postData['password'];
-print_r($password);
 $password = hash("sha256", $password);
-print_r($password);
-print_r($rows);
+//print_r($rows);
 print_r($rows['password']);
 
 if($password == $rows['password']){
