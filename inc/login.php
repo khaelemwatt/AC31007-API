@@ -11,6 +11,7 @@ while ($row = $result->fetch_array()) {
 }
   header("Access-Control-Allow-Origin: *");
   header('Content-type: application/json');
+  print_r($rows);
   echo json_encode($rows);
 
 
