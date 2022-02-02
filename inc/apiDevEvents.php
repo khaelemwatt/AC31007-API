@@ -5,7 +5,7 @@ include("dbconnect.php");
 $devGoal = $params['devGoalID'];
 
 $sql = "SELECT * FROM event WHERE";
-$sqp = sprintf("%s goalID = %s", $sql, $devGoal);
+$sql = sprintf("%s goalID = %s", $sql, $devGoal);
 
 $rows = array();
 $result = $db->query($sql);
