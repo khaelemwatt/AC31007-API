@@ -4,5 +4,8 @@
 
     $sql = sprintf('DELETE FROM event WHERE EventId = %d', $postData['EventId']);
 
-    echo $sql;
+    if ($db->query($sql) === TRUE)
+        echo '{"successful":true}';
+    else 
+        echo '{"successful":false}';
 ?>
