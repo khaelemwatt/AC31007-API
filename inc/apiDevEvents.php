@@ -3,9 +3,10 @@
 include("dbconnect.php");
 
 $devGoal = $params['devGoalID'];
+print_r($devGoal);
 
 $sql = "SELECT * FROM event WHERE";
-$sqp = sprintf("%s goalID = %s", $sql, $devGoal);
+$sqp = sprintf("%s goalID = 1", $sql);
 
 $rows = array();
 $result = $db->query($sql);
@@ -17,4 +18,4 @@ while ($row = $result->fetch_array()) {
   echo json_encode($rows);
 
 
-php?>
+?>
