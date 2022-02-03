@@ -12,6 +12,7 @@ $rules = array(
     'apiDevEvents' => "/api/devEvents/(?'devGoalID'[\w\-]+)",
     'apiSuggestEvent' => "/api/suggestEvent",
     'apiDeleteEvent' => "/api/deleteEvent",
+    'apiSingleEvent' => "/api/singleEvent/(?'eventId'[\w\-]+)",
 
     //Admin Pages
     //
